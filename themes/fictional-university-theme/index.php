@@ -1,17 +1,17 @@
-<?php get_header(); 
+<?php get_header();
 
-   while(have_posts()){
+while (have_posts()) {
 
-      the_post();
-      ?>
+   the_post();
+   ?>
 
    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
    <p><?php the_content(); ?></p>
    <hr width="80%">
 
-      <?php
-   };
+   <?php
+};
 
-   get_footer();
+get_footer();
 
- ?>
+?>
