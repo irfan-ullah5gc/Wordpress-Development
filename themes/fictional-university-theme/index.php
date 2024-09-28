@@ -10,6 +10,8 @@
    <hr width="80%">
 
       <?php
-   }
+   };
+
+   get_footer();
 
  ?>
