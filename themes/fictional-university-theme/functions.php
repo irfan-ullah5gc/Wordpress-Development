@@ -11,7 +11,7 @@ function pageBanner($args = NULL){
    }
 
    if(!isset($args['photo'])){
-      if(get_field('page_banner_background_image')){
+      if(get_field('page_banner_background_image')  AND !is_archive() AND !is_home()){
          $args['photo'] = get_field('page_banner_background_image')['sizes'] ['pageBanner'];
       } else {
          $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
@@ -24,7 +24,7 @@ function pageBanner($args = NULL){
       <div class="page-banner__content container container--narrow">
         <h1 class="page-banner__title"><?php echo $args['title'] ?></h1>
         <div class="page-banner__intro">
-          <p><?php the_field('page_banner_subtitle') ?></p>
+          <p><?php echo $args['subtitle']; ?></p>
       </div>
       </div>
     </div>
